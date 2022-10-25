@@ -1,0 +1,36 @@
+a {
+    text-decoration: none;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 0;
+}
+
+.logo {
+    color: gold;
+    font-size: 2em;
+    font-weight: 400;
+}
+
+.login-button {
+    background-color: aliceblue;
+    color: darkslategrey;
+    font-size: 0.8em;
+    text-transform: uppercase;
+    letter-spacing: .01em;
+    font-weight: 400;
+    padding: 3px 16px;
+    line-height: 24px;
+}
+
+.login-button:hover {
+    opacity: 80%;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
