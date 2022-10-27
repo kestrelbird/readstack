@@ -34,3 +34,99 @@ body {
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
 }
+
+.categories > ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.categories > ul > li {
+    flex-grow: 1;
+    padding: 0.5rem;
+    font-weight: 500;
+    border: 2px solid;
+    color: aliceblue;
+    opacity: 0.8;
+}
+
+.categories > ul > li:hover {
+    opacity: 1;
+}
+
+.categories > ul > li > a {
+    color: inherit;
+    text-align: center;
+    display: block;
+}
+
+.categories > ul > li:nth-child(3n) {
+    background-color: lightseagreen;
+}
+
+.categories > ul > li:nth-child(3n + 1) {
+    background-color: cornflowerblue;
+}
+
+.categories > ul > li:nth-child(3n + 2) {
+    background-color: crimson;
+}
+
+.discovery {
+    border: 2px solid grey;
+    border-radius: 4px;
+    margin-top: 10px;
+    padding: 16px;
+}
+
+.discovery-header {
+    margin: 0;
+}
+
+.discovery-details {
+    color: grey;
+    font-size: 0.8rem;
+}
+
+.discovery-link,
+.discovery-link:visited {
+    color: dodgerblue;
+    word-wrap: break-word;
+}
+
+.discovery-bar {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    font-size: 1.2rem;
+}
+
+.discovery-votes {
+    display: inline;
+    color: dodgerblue;
+}
+
+.discovery-bar > p {
+    margin: 0 4px;
+}
+
+.upvote,
+.downvote {
+    color: dodgerblue;
+}
+
+.upvote:hover {
+    color: green;
+}
+
+.downvote:hover {
+    color: red;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+}
