@@ -1,4 +1,4 @@
-package com.monikapustula.readstack.db;
+package com.monikapustula.readstack.config;
 
 import javax.naming.Context;
 import javax.naming.InitialContext;
