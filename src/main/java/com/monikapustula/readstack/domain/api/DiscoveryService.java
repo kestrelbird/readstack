@@ -16,6 +16,13 @@ public class DiscoveryService {
                 .collect(Collectors.toList());
     }
 
+    public List<DiscoveryBasicInfo> findByCategory(int categoryId) {
+        return discoveryDao.findByCategory(categoryId)
+                .stream()
+                .map(DiscoveryService::discoveryMapper)
+                .collect(Collectors.toList());
+    }
+
      static private DiscoveryBasicInfo discoveryMapper(Discovery d) {
         return new DiscoveryBasicInfo(d.getTitle(), d.getUrl(), d.getDescription(), d.getLocalDateTime());
     }
