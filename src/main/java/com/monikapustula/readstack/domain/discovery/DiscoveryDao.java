@@ -2,6 +2,7 @@ package com.monikapustula.readstack.domain.discovery;
 
 import com.monikapustula.readstack.config.DataSourceProvider;
 import com.monikapustula.readstack.domain.category.Category;
+import com.monikapustula.readstack.domain.common.BaseDao;
 
 import javax.naming.NamingException;
 import javax.sql.DataSource;
@@ -10,16 +11,7 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
-public class DiscoveryDao {
-    private final DataSource dataSource;
-
-    public DiscoveryDao() {
-        try {
-            this.dataSource = DataSourceProvider.getDataSource();
-        } catch (NamingException e) {
-            throw new RuntimeException(e);
-        }
-    }
+public class DiscoveryDao extends BaseDao {
 
     public List<Discovery> findAllDiscoveries() {
         String sql = """
@@ -27,7 +19,7 @@ public class DiscoveryDao {
                  id, title, url, description, date_added, category_id
                 FROM
                  discovery""";
-        try(Connection connection = dataSource.getConnection();
+        try(Connection connection = getConnection();
             Statement statement = connection.createStatement()) {
             ResultSet resultSet = statement.executeQuery(sql);
             List<Discovery> allDiscoveries = new ArrayList<>();
@@ -49,7 +41,7 @@ public class DiscoveryDao {
                 discovery
                 WHERE
                 category_id = ?""";
-        try(Connection connection = dataSource.getConnection();
+        try(Connection connection = getConnection();
             PreparedStatement statement = connection.prepareStatement(sql)) {
             statement.setInt(1, categoryId);
             ResultSet resultSet = statement.executeQuery();
