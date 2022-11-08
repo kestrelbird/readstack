@@ -1,9 +1,18 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
 <nav class="navbar">
     <a href="${pageContext.request.contextPath}" class="logo">
         <i class="fas fa-share-alt-square"></i>
         ReadStack
     </a>
-    <a href="#" class="login-button">Zaloguj</a>
+    <c:choose>
+        <c:when test="${empty pageContext.request.userPrincipal}">
+            <a href="${pageContext.request.contextPath}/login" class="login-button">Zaloguj</a>
+        </c:when>
+
+        <c:when test="${not empty pageContext.request.userPrincipal}">
+            <a href="${pageContext.requests.contextPath}/logout" class="login-button">Wyloguj</a>
+        </c:when>
+    </c:choose>
 </nav>
