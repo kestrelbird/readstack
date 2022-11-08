@@ -39,4 +39,8 @@ public class User {
     public void setId(Integer id) {
         this.id = id;
     }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
 }
