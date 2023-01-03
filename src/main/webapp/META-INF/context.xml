@@ -6,14 +6,14 @@
         password="admin"
         driverClassName="com.mysql.cj.jdbc.Driver"
         url="jdbc:mysql://localhost:3306/readstack?serverTimezone=UTC"/>
-    <Realm ClassName="org.apache.catalina.realm.DataSourceRealm"
+    <Realm className="org.apache.catalina.realm.DataSourceRealm"
     dataSourceName="jdbc/readstack"
     localDataSource="true"
     userTable="user"
     userNameCol="username"
     userCredCol="password"
     userRoleTable="user_role"
-    roleNameCol="user_role">
+    roleNameCol="role_name">
         <CredentialHandler
         className="org.apache.catalina.realm.MessageDigestCredentialHandler"
         algorithm="SHA-256"/>

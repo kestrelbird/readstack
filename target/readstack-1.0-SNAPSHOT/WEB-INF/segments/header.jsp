@@ -12,7 +12,7 @@
         </c:when>
 
         <c:when test="${not empty pageContext.request.userPrincipal}">
-            <a href="${pageContext.requests.contextPath}/logout" class="login-button">Wyloguj</a>
+            <a href="${pageContext.request.contextPath}/logout" class="login-button">Wyloguj</a>
         </c:when>
     </c:choose>
 </nav>
