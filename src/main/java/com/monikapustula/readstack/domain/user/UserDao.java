@@ -84,4 +84,27 @@ public class UserDao extends BaseDao {
         return new User(id, username, email, password, registrationDate);
     }
 
+    public Optional<User> findById(int id) {
+        final String sql = """
+                SELECT 
+                    id, username, email, password, registration_date
+                FROM 
+                    user
+                WHERE
+                    id = ?;
+                """;
+        try(Connection connection = getConnection();
+            PreparedStatement statement = connection.prepareStatement(sql)) {
+            statement.setInt(1, id);
+            ResultSet resultSet = statement.executeQuery();
+            if (resultSet.next()) {
+                return Optional.of(mapRow(resultSet));
+            } else {
+                return Optional.empty();
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
 }

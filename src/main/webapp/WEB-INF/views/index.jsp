@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <title>ReadStack</title>
-    <%@include file="../segments/stylesheets.jsp"%>    
+    <%@include file="../segments/stylesheets.jsp"%>
 </head>
 <body>
 <div class="container">

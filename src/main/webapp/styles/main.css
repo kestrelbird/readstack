@@ -1,3 +1,13 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
 a {
     text-decoration: none;
 }
@@ -28,11 +38,6 @@ a {
 
 .login-button:hover {
     opacity: 80%;
-}
-
-body {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 300;
 }
 
 .categories > ul {
@@ -131,7 +136,16 @@ footer {
     margin-top: 20px;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
+.discovery-add-button {
+    position:fixed;
+    width:50px;
+    height:50px;
+    bottom:40px;
+    right:40px;
+    background-color:#4CD964;
+    color:#FFF;
+    box-shadow: 2px 2px 3px #999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
