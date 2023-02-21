@@ -1,5 +1,5 @@
 # readstack
-This app is a representation of knowledge that I gained during the JavaStart [web development course](https://javastart.pl/kurs/technologie-webowe).
+This app is a representation of knowledge that I have gained during the JavaStart [web development course](https://javastart.pl/kurs/technologie-webowe).
 It was developed only for educational purposes.
 
 ### Technologies
